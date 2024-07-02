@@ -55,7 +55,10 @@ app.post('/login', async (req,res) =>{
         if(userarr.password === hashpass){
             jwt.sign({email:userarr.email,id:userarr._id},process.env.jwtsecret,{},(err,token)=>{
             if(err) throw err;
-            return res.status(200).cookie('token',token).json(userarr);
+            return res.status(200).cookie('token', token, {
+                        httpOnly: true,
+                        sameSite: 'None'
+                    }).json(userarr);
             });
             
         }else{
