@@ -1,2 +1,2 @@
-const api = "http://localhost:5000/uploads/";
+const api = "https://estate-0rer.onrender.com/uploads/";
  export default api;
