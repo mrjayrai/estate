@@ -16,7 +16,7 @@ const Booking = require('./models/Booking');
 const app = express();
 const moment = require('moment');
 app.use(cors({
-    origin:"https://estate-seven-nu.vercel.app/",
+    origin:"https://estate-seven-nu.vercel.app",
     credentials:true,
 }));
 app.use(express.json());
