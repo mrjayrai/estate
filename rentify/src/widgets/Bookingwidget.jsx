@@ -26,7 +26,7 @@ export default function Bookingwidget( { place } ) {
       alert("Please Fill all the information");
       return;
     }
-    // const { data } =await axios.post('bookings',bookdata);
+    const { data } =await axios.post('bookings',bookdata);
     setredirect('/');
   }
 
