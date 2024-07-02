@@ -57,6 +57,7 @@ app.post('/login', async (req,res) =>{
             if(err) throw err;
             return res.status(200).cookie('token', token, {
                         httpOnly: true,
+                        secure:"https://estate-seven-nu.vercel.app",
                         sameSite: 'None'
                     }).json(userarr);
             });
