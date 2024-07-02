@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],input[type="email"],input[type="password"],textarea,input[type="number"],input[type="time"],input[type="date"],input[type="tel"]{
+    @apply w-full border my-1 py-2 px-3 rounded-full border-gray-300 shadow shadow-gray-200;
+}
+
+h2{
+    @apply font-bold text-2xl;
+}
+
+h3{
+    @apply font-bold;
+}
+
+p{
+@apply font-semibold;
+}
+
+textarea{
+    height: 100px;
+}
