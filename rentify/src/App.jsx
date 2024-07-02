@@ -10,7 +10,7 @@ import EditPlace from "./components/EditPlace"
 import PropertyPage from "./components/PropertyPage"
 import MyBooking from "./components/MyBooking"
 
-axios.defaults.baseURL = 'http://localhost:5000/';
+axios.defaults.baseURL = 'https://estate-0rer.onrender.com/';
 axios.defaults.withCredentials= true;
 
 function App() {
