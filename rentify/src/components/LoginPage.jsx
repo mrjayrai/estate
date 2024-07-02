@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext,useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
@@ -8,6 +8,11 @@ export default function LoginPage() {
   const [password,setPassword] = useState('');
   const [redirect,setRedirect] = useState(false);
   const { setuser } = useContext(UserContext);
+
+  useEffect(()=>{
+    alert("email:pritesh@gmail.com password:12345678");
+  },[]);
+  
   async function login(event){
     event.preventDefault()
     try{
