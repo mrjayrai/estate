@@ -92,6 +92,8 @@ app.post('/logout',(req,res)=>{
                     }).json(true);
 });
 
+console.log(__dirname);
+
 app.post('/upload-by-link',async (req,res)=>{
     const { link } = req.body;
     const name = Date.now()+ '.jpg';
