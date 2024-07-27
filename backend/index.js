@@ -21,8 +21,8 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(cookieparser());
-// app.use('/uploads',express.static(__dirname+'/uploads'));
-app.use('/uploads',express.static('https://github.com/mrjayrai/estate/tree/main/backend'+'/uploads'));
+app.use('/uploads',express.static(__dirname+'/uploads'));
+// app.use('/uploads',express.static('https://github.com/mrjayrai/estate/tree/main/backend'+'/uploads'));
 require('dotenv').config();
 
 
@@ -98,15 +98,15 @@ console.log(__dirname);
 app.post('/upload-by-link',async (req,res)=>{
     const { link } = req.body;
     const name = Date.now()+ '.jpg';
-    // await imagedownloader.image({
-    //     url:link,
-    //     dest:__dirname + '/uploads/'+name,
-    // });
-
     await imagedownloader.image({
         url:link,
-        dest:'https://github.com/mrjayrai/estate/tree/main/backend' + '/uploads/'+name,
+        dest:__dirname + '/uploads/'+name,
     });
+
+    // await imagedownloader.image({
+    //     url:link,
+    //     dest:'https://github.com/mrjayrai/estate/tree/main/backend' + '/uploads/'+name,
+    // });
     res.json(name);
 });
 
